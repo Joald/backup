@@ -1,0 +1,8 @@
+int32_t AddStream(
+      ElementaryStreamType stream_type,
+      ElementaryStreamListener* listener,
+      const std::function<void(int32_t, const ElementaryStream&)>& callback);
+
+  int32_t AddStream(
+        ElementaryStreamType stream_type, ElementaryStream&,
+        ElementaryStreamListener* listener);

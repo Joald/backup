@@ -1,0 +1,3 @@
+VDGONACL-359 nacl_player: add methods that don't use shared_ptrs to manage listeners
+
+Change-Id: I8474cd200916adda593068eb3f12996abd3218b3

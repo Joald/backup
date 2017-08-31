@@ -1,0 +1,4 @@
+﻿  pass.cpp
+c:\users\j.olczyk\desktop\random\pass\pass\pass.cpp(12): warning C4018: '<': signed/unsigned mismatch
+  pass.vcxproj -> C:\Users\j.olczyk\Desktop\random\pass\Debug\pass.exe
+  pass.vcxproj -> C:\Users\j.olczyk\Desktop\random\pass\Debug\pass.pdb (Full PDB)

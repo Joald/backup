@@ -1,0 +1,4 @@
+TODO: 
+-- compile using "build/build_pnacl.sh native_player_widget"
+
+-- Konstruktor MediaPlayer::Impl przyjmuj¹cy bind_mode i player_mode w doœæ ma³o czytelny sposób u¿ywa implicit konstruktora listenerów. Mo¿na kosztem d³u¿szego kodu zrobiæ czytelniej dodaj¹c

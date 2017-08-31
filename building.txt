@@ -1,0 +1,4 @@
+Q:\views\nacl-tests\third_party\nacl_sdk\pepper_47\toolchain\win_pnacl\include
+Q:\views\nacl-tests\third_party\nacl_sdk\pepper_47\toolchain\win_pnacl\i686_bc-nacl\include
+Q:\views\nacl-tests\third_party\nacl_sdk\pepper_47\include
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include

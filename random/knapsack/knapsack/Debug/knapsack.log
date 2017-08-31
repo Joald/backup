@@ -1,0 +1,8 @@
+﻿  knapsack.cpp
+c:\users\j.olczyk\desktop\random\knapsack\knapsack\knapsack.cpp(53): warning C4018: '>=': signed/unsigned mismatch
+c:\users\j.olczyk\desktop\random\knapsack\knapsack\knapsack.cpp(53): warning C4018: '>': signed/unsigned mismatch
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\utility(200): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  c:\users\j.olczyk\desktop\random\knapsack\knapsack\knapsack.cpp(86): note: see reference to function template instantiation 'std::pair<bool,bool>::pair<int,int,void,0>(std::pair<int,int> &&) noexcept' being compiled
+  c:\users\j.olczyk\desktop\random\knapsack\knapsack\knapsack.cpp(86): note: see reference to function template instantiation 'std::pair<bool,bool>::pair<int,int,void,0>(std::pair<int,int> &&) noexcept' being compiled
+  knapsack.vcxproj -> C:\Users\j.olczyk\Desktop\random\knapsack\Debug\knapsack.exe
+  knapsack.vcxproj -> C:\Users\j.olczyk\Desktop\random\knapsack\Debug\knapsack.pdb (Full PDB)
