@@ -1,0 +1,1 @@
+cd reference_demos/native_player/sdk_project
