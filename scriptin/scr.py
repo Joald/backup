@@ -1,6 +1,6 @@
 from os import walk
 
-## Replaces the instances of std::shared_ptr<T> with T*.
+## Replaces the instances of 'std::shared_ptr<T>' with 'T*'.
 ## Doesn't work if T is templated or if there are multiple
 ## templates in one line. 
 
