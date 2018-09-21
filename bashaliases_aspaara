@@ -1,0 +1,102 @@
+  alias targz="tar -xvzf"
+alias sio="~/sio2/deployment/manage.py"
+alias pubssh="vim ~/.ssh/*.pub"
+alias shorts="vim ~/.bash_aliases"
+alias rc=". ~/.bash_profile"
+alias cgrep="grep --color=always"
+alias gcg="vim ~/.gitconfig"
+alias vsio="source ~/sio2/venv/bin/activate"
+alias psa="ps aux -A | less"
+
+start() {
+	nautilus --browser "$@" &
+}
+alias cim="vim"
+alias vgfull="valgrind --leak-check=full --show-leak-kinds=all "
+alias mkless="unbuffer make |& less -r"
+alias llr="ll | less -r"
+alias ks="ls"
+alias playraw="play -t raw -c 2 -r 44100 -b 16 -e signed-integer --buffer 32768 - <"
+comp() {
+    EXTENSION=
+    if [ ! -e $1.cpp ]; then
+        if [ ! -e $1.cc ]; then
+            echo "Neither $1.cpp nor $1.cc exist!\n"
+            exit -1
+        fi
+        EXTENSION=".cc"
+    else
+        EXTENSION=".cpp"
+    fi
+
+    g++ -g -Wall -Weffc++ -Wpedantic  \
+    -pedantic-errors -Wextra -Wcast-align \
+    -Wcast-qual -Wno-error=unused-variable \
+    -Wdisabled-optimization \
+    -Werror -Wfloat-equal -Wformat=2 \
+    -Wformat-nonliteral -Wformat-security  \
+    -Wformat-y2k \
+    -Wimport  -Winit-self  -Winline \
+    -Winvalid-pch  -Wno-vla \
+    -Wlong-long \
+    -Wmissing-field-initializers -Wmissing-format-attribute   \
+    -Wmissing-include-dirs -Wmissing-noreturn \
+    -Wpacked  -Wpadded -Wpointer-arith \
+    -Wredundant-decls \
+    -Wshadow \
+    -Wstrict-aliasing=2 -Wswitch-default \
+    -Wswitch-enum \
+    -Wunreachable-code -Wunused \
+    -Wunused-parameter \
+    -Wvariadic-macros \
+    -Wwrite-strings -std=c++17 -fdiagnostics-color=always -o $1 $1$EXTENSION
+}
+psg() {
+    ps aux -A | grep $1 --color=always | less -R
+}
+formod() {
+    git st | grep "modified:" | cut -c 14- | sed -e 's/^/.\//' | tr '\n' ' ' | xargs "$@"
+}
+sendmod() {
+    set -e
+    git st
+    printf "\n"
+    formod git add
+    git st
+    printf "\n"
+    git came
+    git st
+    printf "\n"
+    git review
+    git st
+    printf "\n"
+}
+wcc() {
+DIR="$1"
+shift
+ARGS='-name '"$1"' '
+shift
+for arg in "$@"
+do
+    ARGS=$ARGS'-o -name '"$arg"' '
+done
+#echo $ARGS
+find $DIR \( $ARGS \) -and ! -wholename "*/cmake-build-debug/*" | xargs wc -l
+}
+wcpp() {
+wcc "$1" "*.cc" "*.h" "*.cpp" "*.hpp"
+}
+
+gitpush() {
+    git add .
+    git commit -m "$*"
+    git push
+}
+
+alias gp=gitpush
+
+flask() {
+inv flask -c "$*"
+}
+
+xmodmap ~/.xmodmap
